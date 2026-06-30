@@ -48,7 +48,7 @@ include __DIR__ . '/../includes/header.php';
                             <h1 class="h2 fw-bold mb-3">Admin Panel</h1>
                             <p class="mb-0">Review enquiries, search leads, and manage customer requests securely using a session-protected dashboard.</p>
                         </div>
-                        <p class="small mt-4 mb-0">Default login: <strong>admin</strong> / <strong>Admin@12345</strong></p>
+                        <p class="small mt-4 mb-0">Authorized access only. Contact the site owner for login details.</p>
                     </div>
                     <div class="col-lg-7 bg-white p-4 p-lg-5">
                         <h2 class="h3 fw-bold mb-2">Sign In</h2>
