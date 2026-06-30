@@ -75,6 +75,7 @@ define('DB_HOST', solarconnect_env('DB_HOST', '127.0.0.1'));
 define('DB_NAME', solarconnect_env('DB_NAME', 'solarconnect'));
 define('DB_USER', solarconnect_env('DB_USER', 'root'));
 define('DB_PASS', solarconnect_env('DB_PASS', ''));
+define('DB_PORT', (int) solarconnect_env('DB_PORT', '3306'));
 
 // Default admin login for local development. Override in Render or .env when deploying.
 define('ADMIN_USERNAME', solarconnect_env('ADMIN_USERNAME', 'admin'));
