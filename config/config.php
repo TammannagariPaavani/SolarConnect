@@ -70,13 +70,13 @@ solarconnect_load_env_file(__DIR__ . '/../.env');
 
 define('SITE_NAME', 'SolarConnect');
 
-// XAMPP defaults work out of the box, while Render can override these via env vars.
-define('DB_HOST', solarconnect_env('DB_HOST', '127.0.0.1'));
-define('DB_NAME', solarconnect_env('DB_NAME', 'solarconnect'));
-define('DB_USER', solarconnect_env('DB_USER', 'root'));
-define('DB_PASS', solarconnect_env('DB_PASS', ''));
+// Local .env values win first; these fallback defaults match the current InfinityFree setup.
+define('DB_HOST', solarconnect_env('DB_HOST', 'sql113.infinityfree.com'));
+define('DB_NAME', solarconnect_env('DB_NAME', 'if0_41928316_solarconnect'));
+define('DB_USER', solarconnect_env('DB_USER', 'if0_41928316'));
+define('DB_PASS', solarconnect_env('DB_PASS', 'Solar2026DB'));
 define('DB_PORT', (int) solarconnect_env('DB_PORT', '3306'));
 
-// Admin login must come from .env or Render environment variables.
-define('ADMIN_USERNAME', solarconnect_env('ADMIN_USERNAME', ''));
-define('ADMIN_PASSWORD_HASH', solarconnect_env('ADMIN_PASSWORD_HASH', ''));
+// Admin login also falls back to the current working credentials if no env file is present.
+define('ADMIN_USERNAME', solarconnect_env('ADMIN_USERNAME', 'admin'));
+define('ADMIN_PASSWORD_HASH', solarconnect_env('ADMIN_PASSWORD_HASH', '$2y$10$EMKFzgeObkXJ8TTSPv9ycO9l/WybzWD6F1gGWGxxisjB2qIcoE5tK'));
