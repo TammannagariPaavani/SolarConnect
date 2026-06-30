@@ -3,7 +3,7 @@
 $pageTitle = $pageTitle ?? SITE_NAME;
 $pageDescription = $pageDescription ?? 'Professional rooftop solar installation solutions with fast enquiries and secure follow-up.';
 $bodyClass = $bodyClass ?? '';
-$showAdminLink = $showAdminLink ?? true;
+$showAdminLink = $showAdminLink ?? false;
 $activeNav = $activeNav ?? 'home';
 ?>
 <!doctype html>

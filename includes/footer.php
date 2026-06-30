@@ -10,7 +10,6 @@
             <div class="col-lg-5 text-lg-end">
                 <a href="<?php echo e(site_url('index.php#packages')); ?>" class="footer-link me-3">Packages</a>
                 <a href="<?php echo e(site_url('index.php#enquiry')); ?>" class="footer-link me-3">Enquiry</a>
-                <a href="<?php echo e(site_url('admin/login.php')); ?>" class="footer-link">Admin</a>
             </div>
         </div>
         <hr class="footer-divider my-4">
