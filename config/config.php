@@ -77,6 +77,6 @@ define('DB_USER', solarconnect_env('DB_USER', 'root'));
 define('DB_PASS', solarconnect_env('DB_PASS', ''));
 define('DB_PORT', (int) solarconnect_env('DB_PORT', '3306'));
 
-// Default admin login for local development. Override in Render or .env when deploying.
-define('ADMIN_USERNAME', solarconnect_env('ADMIN_USERNAME', 'admin'));
-define('ADMIN_PASSWORD_HASH', solarconnect_env('ADMIN_PASSWORD_HASH', '$2b$12$nPMPqfY9iUEXOf.m3Wpq/ulEPp/EzdMJVdq/M6Xuzd1He/yJSp5IG'));
+// Admin login must come from .env or Render environment variables.
+define('ADMIN_USERNAME', solarconnect_env('ADMIN_USERNAME', ''));
+define('ADMIN_PASSWORD_HASH', solarconnect_env('ADMIN_PASSWORD_HASH', ''));
