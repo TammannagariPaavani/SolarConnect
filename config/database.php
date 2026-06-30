@@ -9,10 +9,11 @@ function db_connect(): mysqli
         return $connection;
     }
 
-    $connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+    mysqli_report(MYSQLI_REPORT_OFF);
+    $connection = @new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
     if ($connection->connect_error) {
-        throw new RuntimeException('Database connection failed: ' . $connection->connect_error);
+        throw new RuntimeException('Database connection failed.');
     }
 
     $connection->set_charset('utf8mb4');
