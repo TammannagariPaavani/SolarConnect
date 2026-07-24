@@ -13,6 +13,7 @@ function db_connect(): mysqli
     $connection = @new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
     if ($connection->connect_error) {
+        error_log('[SolarConnect] DB connection failed: ' . $connection->connect_error);
         throw new RuntimeException('Database connection failed.');
     }
 

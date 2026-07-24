@@ -41,6 +41,7 @@ try {
     set_flash('success', 'Thank you! Your enquiry has been submitted successfully.');
     redirect(site_url('index.php#enquiry'));
 } catch (Throwable $exception) {
+    error_log('[SolarConnect] Enquiry save failed: ' . $exception->getMessage());
     set_flash('error', 'Could not save your enquiry right now. Please try again later.');
     redirect(site_url('index.php#enquiry'));
 }
