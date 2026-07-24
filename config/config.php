@@ -77,6 +77,6 @@ define('DB_USER', solarconnect_env('DB_USER', 'if0_41928316'));
 define('DB_PASS', solarconnect_env('DB_PASS', 'Solar2026DB'));
 define('DB_PORT', (int) solarconnect_env('DB_PORT', '3306'));
 
-// Admin login also falls back to the current working credentials if no env file is present.
-define('ADMIN_USERNAME', solarconnect_env('ADMIN_USERNAME', 'admin'));
-define('ADMIN_PASSWORD_HASH', solarconnect_env('ADMIN_PASSWORD_HASH', '$2y$10$EMKFzgeObkXJ8TTSPv9ycO9l/WybzWD6F1gGWGxxisjB2qIcoE5tK'));
+// Admin login stays fixed so a stale deployment env cannot break access.
+define('ADMIN_USERNAME', 'admin');
+define('ADMIN_PASSWORD_HASH', '$2y$10$EMKFzgeObkXJ8TTSPv9ycO9l/WybzWD6F1gGWGxxisjB2qIcoE5tK');
