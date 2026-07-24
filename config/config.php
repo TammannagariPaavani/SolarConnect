@@ -70,11 +70,11 @@ solarconnect_load_env_file(__DIR__ . '/../.env');
 
 define('SITE_NAME', 'SolarConnect');
 
-// Local .env values win first; these fallback defaults match the current InfinityFree setup.
-define('DB_HOST', solarconnect_env('DB_HOST', 'sql113.infinityfree.com'));
-define('DB_NAME', solarconnect_env('DB_NAME', 'if0_41928316_solarconnect'));
-define('DB_USER', solarconnect_env('DB_USER', 'if0_41928316'));
-define('DB_PASS', solarconnect_env('DB_PASS', 'Solar2026DB'));
+// Local defaults match XAMPP; production can override these via environment variables.
+define('DB_HOST', solarconnect_env('DB_HOST', '127.0.0.1'));
+define('DB_NAME', solarconnect_env('DB_NAME', 'solarconnect'));
+define('DB_USER', solarconnect_env('DB_USER', 'root'));
+define('DB_PASS', solarconnect_env('DB_PASS', ''));
 define('DB_PORT', (int) solarconnect_env('DB_PORT', '3306'));
 
 // Admin login stays fixed so a stale deployment env cannot break access.
